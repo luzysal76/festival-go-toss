@@ -293,6 +293,36 @@ h2 { font-size: 21px; }
 
 .input-row button { width: 62px; }
 
+.onboard-banner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border: 1px solid rgba(14, 165, 233, .2);
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, .96), rgba(236, 253, 245, .96));
+  box-shadow: 0 10px 24px rgba(14, 116, 144, .1);
+  backdrop-filter: blur(14px);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.onboard-banner button {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(14, 165, 233, .12);
+  color: #0284c7;
+  font-weight: 900;
+}
+
 .quick-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -444,6 +474,66 @@ h2 { font-size: 21px; }
 .settle-box {
   display: grid;
   gap: 10px;
+}
+
+.member-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.member-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border: 1px solid rgba(14, 165, 233, .18);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffffff, #f0fbff);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.member-chip strong {
+  color: #0284c7;
+}
+
+.member-chip button {
+  width: 18px;
+  height: 18px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 95, 162, .16);
+  color: #ff5fa2;
+  font-weight: 900;
+  line-height: 1;
+  padding: 0;
+}
+
+.member-add-form {
+  display: flex;
+  gap: 8px;
+}
+
+.member-add-form input {
+  min-width: 0;
+  flex: 1;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid rgba(14, 165, 233, .2);
+  border-radius: 12px;
+  background: #f8fdff;
+}
+
+.member-add-form button {
+  flex: 0 0 auto;
+  height: 40px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #e0f7ff, #d1fae5);
+  color: #0284c7;
+  font-weight: 800;
 }
 
 .expense-row, .total-row, .per-row {

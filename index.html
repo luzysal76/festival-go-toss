@@ -44,6 +44,11 @@
         </button>
       </section>
 
+      <div class="onboard-banner" id="onboardBanner" hidden>
+        <span>👋 처음 오셨네요! 예시 일정과 데이터로 시작해드릴게요.</span>
+        <button type="button" id="onboardCloseButton" aria-label="닫기">×</button>
+      </div>
+
       <section class="quick-grid" aria-label="주요 기능">
         <button data-tab="parking"><span>🚗</span>주차</button>
         <button data-tab="food"><span>🍴</span>맛집</button>
@@ -106,18 +111,23 @@
         <div class="section-head">
           <div>
             <p class="eyebrow">토스 원클릭 정산</p>
-            <h2>6명 모임 경비</h2>
+            <h2 id="settleTitle">모임 경비</h2>
           </div>
-          <span class="pill blue">1/N</span>
+          <span class="pill blue" id="settleStatusPill">1/N</span>
         </div>
         <div class="settle-box">
+          <div class="member-row" id="memberRow"></div>
+          <form class="member-add-form" id="memberAddForm">
+            <input id="memberNameInput" placeholder="참여자 이름 추가" />
+            <button type="submit">추가</button>
+          </form>
           <div id="expenseList"></div>
           <div class="total-row">
             <span>총합</span>
             <strong id="totalAmount"></strong>
           </div>
           <div class="per-row">
-            <span>1인</span>
+            <span>평균 1인</span>
             <strong id="perAmount"></strong>
           </div>
           <button class="primary-action" type="button" id="tossButton">토스로 정산 요청</button>
@@ -159,6 +169,10 @@
         <button data-tab="settle">정산</button>
       </nav>
     </main>
+    <script src="./js/storage.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/settleGroup.js"></script>
+    <script src="./js/planner.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>
